@@ -1,5 +1,14 @@
 import { Router } from "express";
-import type { ApiResponse, HelloResponse } from "shared";
+
+interface ApiResponse<T = unknown> {
+  success: boolean;
+  data?: T;
+  error?: string;
+}
+
+interface HelloResponse {
+  message: string;
+}
 
 export const helloRouter = Router();
 

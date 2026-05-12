@@ -4,7 +4,16 @@ import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import type { User } from "@supabase/supabase-js";
-import type { ApiResponse, HelloResponse } from "shared";
+
+interface ApiResponse<T = unknown> {
+  success: boolean;
+  data?: T;
+  error?: string;
+}
+
+interface HelloResponse {
+  message: string;
+}
 
 export default function DashboardPage() {
   const [user, setUser] = useState<User | null>(null);

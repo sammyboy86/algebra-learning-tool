@@ -12,8 +12,7 @@
     "express": "^4",
     "cors": "^2",
     "dotenv": "^16",
-    "@supabase/supabase-js": "^2",
-    "shared": "*"
+    "@supabase/supabase-js": "^2"
   },
   "devDependencies": {
     "typescript": "^5",
